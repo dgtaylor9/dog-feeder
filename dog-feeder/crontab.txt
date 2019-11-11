@@ -1,0 +1,16 @@
+#start daemon on pi startup
+@reboot sudo pigpiod
+
+# feed dog at 6:30am, 11:30am, 4:30pm, and 9:30pm M-F
+30 6,11,16,21 * * 1,2,3,4,5 /home/pi/home-projects/dog-feeder/feedDog.sh
+# feed dog at 6:30am, 11:30am M-F
+#30 6,11 * * 1,2,3,4,5 /home/pi/home-projects/dog-feeder/feedDog.sh
+
+# feed dog at 6:30am and 9:30pm Sat & Sun
+30 6,21 * * 0,6 /home/pi/home-projects/dog-feeder/feedDog.sh
+
+# roll the log once/week, and purge log data that's over 1 week old
+# currently handled by logrotate (see /etc/logrotate.conf)
+#0 0 * * 6 rm -f /home/pi/home-projects/dog-feeder/logs/log.txt.old
+#1 0 * * 6 mv /home/pi/home-projects/dog-feeder/logs/log.txt /home/pi/home-projects/dog-feeder/logs/log.txt.old
+

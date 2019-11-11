@@ -41,7 +41,6 @@ def send_email(subject, body):
    server.close()
    return;
 
-
 def take_photo():
    try:
       camera = PiCamera()
@@ -93,7 +92,8 @@ try:
    take_photo()
 
    # Send success email
-   send_email("Dog Fed Successfully!", "The mongrel is fat and happy. :-)") 
+   send_email("Dog Fed Successfully!", "The mongrel is fat and happy. :-)")
+
 except Exception as e:
    # Send failure email
    print("FAILURE: " + str(e))
