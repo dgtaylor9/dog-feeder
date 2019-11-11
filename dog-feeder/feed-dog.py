@@ -15,7 +15,7 @@ PORT = "587"
 sender= "" # insert email address here
 password = "" # insert password here
 receiver= "" # insert recipient email address here
-photoFile = "DogFeeder/crate_photo.jpg"
+photoFile = "home-projects/dog-feeder/photos/crate_photo.jpg"
 
 def send_email(subject, body):
    socket.setdefaulttimeout(None)
