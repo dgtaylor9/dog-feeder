@@ -1,0 +1,31 @@
+Feeding started at 2019-03-10T06:30:02.722500
+Servo 18 700 micro pulses
+Servo 18 2300 micro pulses
+Servo 18 700 micro pulses
+Feeding completed at 2019-03-10T06:30:08.742662
+Feeding started at 2019-03-10T10:05:05.009887
+Servo 18 700 micro pulses
+Servo 18 2300 micro pulses
+Servo 18 700 micro pulses
+Feeding completed at 2019-03-10T10:05:11.031147
+Feeding started at 2019-03-10T16:31:20.554292
+Servo 18 700 micro pulses
+Servo 18 2300 micro pulses
+Servo 18 700 micro pulses
+Feeding completed at 2019-03-10T16:31:26.574851
+Feeding started at 2019-03-10T21:30:02.743363
+Servo 18 700 micro pulses
+Servo 18 2300 micro pulses
+Servo 18 700 micro pulses
+Feeding completed at 2019-03-10T21:30:08.763320
+FAILURE: (421, '4.7.0 Temporary System Problem.  Try again later (10). 25sm487585iog.83 - gsmtp')
+Traceback (most recent call last):
+  File "/home/pi/DogFeeder/feed-dog.py", line 100, in <module>
+    send_email("FAILURE Feeding Dog!", "The mongrel is sad and hungry. :-(\nException: " + str(e)) 
+  File "/home/pi/DogFeeder/feed-dog.py", line 40, in send_email
+    server.sendmail(sender,receiver, msg.as_string())
+  File "/usr/lib/python2.7/smtplib.py", line 748, in sendmail
+    (code, resp) = self.data(msg)
+  File "/usr/lib/python2.7/smtplib.py", line 504, in data
+    raise SMTPDataError(code, repl)
+smtplib.SMTPDataError: (421, '4.7.0 Temporary System Problem.  Try again later (10). f132sm1771816ioa.76 - gsmtp')

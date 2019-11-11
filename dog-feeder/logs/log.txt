@@ -1,0 +1,5 @@
+Feeding started at 2019-03-12T06:30:03.126048
+Servo 18 700 micro pulses
+Servo 18 2300 micro pulses
+Servo 18 700 micro pulses
+Feeding completed at 2019-03-12T06:30:09.145202
