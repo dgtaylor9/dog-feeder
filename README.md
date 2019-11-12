@@ -24,8 +24,6 @@ The first iteration of the dog feeder can be seen in action [here](https://youtu
 
 As you can see, getting the food into my dog's bowl was a challenge, since I had to use a slow feeding bowl for my dog.  Sometimes the food would hit the ridges in her bowl as it tumbled out of the PVC pipe, causing it to bounce out of her crate, or get buried under her crate liner.  In addition, there was the possibility of power outages and other issues, which would have impacted my dog's feeding, that I was unable to know about without SSH-ing to the Raspberry Pi and looking at the logs.  So, in addition to making modifications to the PVC to increase accuracy of the delivery of the payload, I also added on a process that would take a picture of the food in the bowl immediately after it was delivered, and then email that picture to me, so I could know how well she was fed (or not fed).
 
-Here's a gratuitous picture of my dog and her just-delivered food.
-
 ### Code
 
 The code for this project can be located in the [dog-feeder](dog-feeder/) directory.
@@ -34,3 +32,14 @@ The code for this project can be located in the [dog-feeder](dog-feeder/) direct
 
 The [dog-feeder/test-scripts](dog-feeder/test-scripts) directory contains "scratch code" that was used to test various options for connecting to the servo, or the camera, etc.  This represents iterative testing that ultimately resulted in the final product described above.
 
+### Circuit Diagram
+
+Supplies:
+* D645MW Digital Super Torque servo from HiTec
+* TIP120 transistor
+* 10,000 Ohm resistor
+* USB Micro power adapter (5V) for a breadboard
+* Y-Power Adapter (to power the Raspberry Pi and the Servo separately from the same outlet)
+* small breadboard
+
+![circuit diagram](images/dog-feeder-circuit.jpeg)
